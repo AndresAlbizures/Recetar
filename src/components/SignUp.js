@@ -31,7 +31,7 @@ const SignUp = () => {
   return (
     <div className="auth-container">
       <div className="logo-container">
-        <img src="public\supermercado.png" alt="Logo" className="logo" />
+  
         <span className="logo-text">Recetar</span>
       </div>
       <h2>Registro</h2>
