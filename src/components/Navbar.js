@@ -1,13 +1,8 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles.css'; // Asegúrate de que este archivo esté correctamente importado
+import '../styles.css';
 
-const Navbar = ({ onGenerateCalendar, isAuthenticated }) => {
-  if (!isAuthenticated) {
-    return null; // No renderizar el navbar si no está autenticado
-  }
-
+const Navbar = ({ onGenerateCalendar }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
