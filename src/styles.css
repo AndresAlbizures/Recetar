@@ -28,20 +28,7 @@
 
 /* Logo container styles */
 .logo-container {
-    display: flex;
-    align-items: center;
-    margin-right: auto; /* Align logo to the left */
-}
-
-.logo {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333; /* Texto oscuro */
+    display: none; /* Hide logo and text in the navbar */
 }
 
 /* Styles for nav buttons and links */
@@ -195,6 +182,24 @@ h3 {
     text-align: center;
     margin: 20px auto;
     max-width: 400px;
+}
+
+.auth-container .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.auth-container .logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.auth-container .logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; /* Texto oscuro */
 }
 
 .auth-container h2 {

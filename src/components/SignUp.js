@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth, googleProvider } from '../firebase';
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import '../styles.css';
 
 const SignUp = () => {
@@ -30,6 +30,10 @@ const SignUp = () => {
 
   return (
     <div className="auth-container">
+      <div className="logo-container">
+        <img src="/supermarket.png" alt="Logo" className="logo" />
+        <span className="logo-text">Recetar</span>
+      </div>
       <h2>Registro</h2>
       <form onSubmit={handleSignUp}>
         <input
@@ -48,8 +52,12 @@ const SignUp = () => {
         />
         <button type="submit">Registrarse</button>
       </form>
-      <button className="google-button" onClick={handleGoogleSignUp}>Registrarse con Google</button>
-      <p>¿Ya tienes una cuenta? <Link to="/signin">Iniciar sesión</Link></p>
+      <button className="google-button" onClick={handleGoogleSignUp}>
+        Registrarse con Google
+      </button>
+      <p>
+        ¿Ya tienes una cuenta? <Link to="/signin">Iniciar sesión</Link>
+      </p>
     </div>
   );
 };

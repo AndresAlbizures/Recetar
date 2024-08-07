@@ -76,21 +76,30 @@ const App = () => {
   };
 
   if (loading) {
-    return <div>Cargando...</div>;
+    return <div>Cargando...</div>; // Puedes agregar un spinner o alguna animación de carga aquí
   }
 
   return (
     <Router>
-      <Navbar onGenerateCalendar={generateCalendar} />
-      <div className="container">
+      {user ? (
+        <>
+          <Navbar onGenerateCalendar={generateCalendar} />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Home meals={meals} addMeal={addMeal} />} />
+              <Route path="/planner" element={<Planner calendar={calendar} />} />
+              <Route path="/meals" element={<MealList />} /> {/* Nueva ruta */}
+              <Route path="*" element={<Navigate to="/" />} /> {/* Redirigir cualquier ruta no válida a la página principal */}
+            </Routes>
+          </div>
+        </>
+      ) : (
         <Routes>
-          <Route path="/" element={user ? <Home meals={meals} addMeal={addMeal} /> : <SignIn />} />
-          <Route path="/planner" element={user ? <Planner calendar={calendar} /> : <SignIn />} />
-          <Route path="/meals" element={user ? <MealList /> : <SignIn />} />
-          <Route path="/signup" element={user ? <Navigate to="/" /> : <SignUp />} />
-          <Route path="/signin" element={user ? <Navigate to="/" /> : <SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="*" element={<Navigate to="/signin" />} /> {/* Redirigir cualquier ruta no válida a la página de inicio de sesión */}
         </Routes>
-      </div>
+      )}
     </Router>
   );
 };
