@@ -31,7 +31,7 @@ const SignIn = () => {
   return (
     <div className="auth-container">
       <div className="logo-container">
-        <img src="./supermercado.png" alt="Logo" className="logo" />
+        <img src=".../public/supermercado.png" alt="Logo" className="logo" />
         <span className="logo-text">Recetar</span>
       </div>
       <h2>Iniciar sesión</h2>
