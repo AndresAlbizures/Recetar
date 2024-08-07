@@ -1,0 +1,141 @@
+/* Planner.css */
+
+/* Estilos generales para la vista de escritorio */
+.planner-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.calendar-month {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+.calendar-day {
+    background-color: #F6E8D6; /* Madera clara pastel */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.calendar-day h3 {
+    font-size: 16px; /* Tamaño de fuente estándar para escritorio */
+    margin-bottom: 5px;
+    color: #8E6F4A; /* Café suave */
+}
+
+.calendar-day p {
+    font-size: 14px; /* Tamaño de fuente para el nombre del día */
+    margin: 0;
+    color: #A89F91; /* Madera pastel más clara */
+}
+
+.calendar-day ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.calendar-day li {
+    background-color: #F7D5A0; /* Madera naranja pastel */
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #6F4F28; /* Café cálido para el texto */
+}
+
+.planner-actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.print-button {
+    background-color: #F8E7BB; /* Rosa pastel suave */
+    color: rgb(51, 4, 4); /* Café oscuro para el texto */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.print-button:hover {
+    background-color: #F5DEA9; /* Rosa pastel más profundo para el hover */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .planner-container {
+        padding: 5px; /* Reducir padding para ajustar mejor en pantallas pequeñas */
+    }
+
+    .calendar-month {
+        grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
+        gap: 5px; /* Espacio entre los días */
+    }
+
+    .calendar-day {
+        padding: 5px;
+        min-width: 50px; /* Tamaño mínimo ajustado para encajar en la cuadrícula */
+        max-width: 70px; /* Tamaño máximo ajustado para encajar en la cuadrícula */
+    }
+
+    .calendar-day h3 {
+        font-size: 12px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+        margin-bottom: 2px;
+    }
+
+    .calendar-day p {
+        font-size: 10px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+    }
+
+    .calendar-day ul {
+        margin: 5px 0 0;
+    }
+
+    .calendar-day li {
+        padding: 3px;
+        font-size: 8px; /* Tamaño de fuente aún más pequeño para pantallas pequeñas */
+    }
+
+    .print-button {
+        font-size: 14px; /* Ajustar el tamaño de fuente del botón para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-month {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Ajustar columnas para pantallas muy pequeñas */
+    }
+
+    .calendar-day {
+        min-width: 40px; /* Tamaño mínimo aún más pequeño para pantallas muy pequeñas */
+        max-width: 60px; /* Tamaño máximo aún más pequeño para pantallas muy pequeñas */
+        padding: 3px; /* Ajustar el padding para pantallas muy pequeñas */
+    }
+
+    .calendar-day h3 {
+        font-size: 8px; /* Reducido el tamaño de fuente en pantallas muy pequeñas */
+    }
+
+    .calendar-day p {
+        font-size: 6px; /* Reducido aún más el tamaño de fuente en pantallas muy pequeñas */
+    }
+
+    .calendar-day li {
+        font-size: 5px; /* Reducido aún más el tamaño de fuente en pantallas muy pequeñas */
+    }
+
+    .print-button {
+        font-size: 12px; /* Ajustar el tamaño de fuente del botón para pantallas pequeñas */
+    }
+}

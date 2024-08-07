@@ -1,0 +1,280 @@
+/* Navbar styles */
+.navbar {
+    background-color: #B3CDE0; /* Azul Pastel */
+    padding: 10px 0;
+    position: fixed; /* Make the navbar fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center; /* Center the navbar items horizontally */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit width for larger screens */
+    padding: 0 20px; /* Add padding on sides */
+    margin: 0 auto;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;
+    flex: 1; /* Allows the content to expand and take available space */
+}
+
+.navbar-content a, .navbar-content button {
+    background-color: #F5E4B9; /* Amarillo Suave */
+    color: #333; /* Texto oscuro */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Tamaño de fuente */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 10px; /* Espacio entre los botones */
+    display: inline-block; /* Permite que los botones se alineen horizontalmente */
+    text-align: center; /* Centra el texto en los botones */
+}
+
+/* Estilos para los botones en estado hover */
+.navbar-content a:hover, .navbar-content button:hover {
+    background-color: #D0B8A8; /* Beige Claro */
+}
+
+/* Ajustar el padding-top del body para evitar que el contenido quede debajo del navbar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    padding-top: 70px; /* Asegúrate de que sea suficiente para el navbar */
+    background-color: #F6F4E6; /* Crema */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Ensure the container is centered */
+    margin: 0 auto;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-container {
+        padding: 0;
+    }
+
+    .navbar-content {
+        flex-direction: row; /* Align buttons horizontally in mobile view */
+        justify-content: space-between; /* Space out buttons evenly */
+        width: 100%; /* Full width for responsive alignment */
+    }
+
+    .navbar-content a, .navbar-content button {
+        margin: 5px; /* Espaciado vertical y horizontal entre botones */
+        font-size: 14px; /* Tamaño de fuente reducido */
+        padding: 8px 15px; /* Ajustar padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-content a, .navbar-content button {
+        font-size: 12px; /* Tamaño de fuente aún más reducido */
+        padding: 6px 12px; /* Ajustar padding para pantallas muy pequeñas */
+    }
+}
+
+/* Estilos generales para el contenido */
+form {
+    background-color: #FFF; /* Blanco */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Tamaño de fuente ajustado */
+}
+
+form button {
+    background-color: #4CAF50; /* Verde estándar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Espaciado superior e inferior */
+}
+
+form button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+/* Estilos para listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #F5E4B9; /* Amarillo Suave */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #333; /* Texto oscuro */
+}
+
+/* Estilos para el botón de agregar a la lista */
+.add-meal-button {
+    background-color: #4CAF50; /* Verde estándar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.add-meal-button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+/* Estilos para los encabezados */
+h1 {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #2f8855; /* Rosa Palo */
+    text-align: center;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #66ca6e; /* Rosa Palo */
+}
+
+/* Estilos para el contenedor de autenticación */
+.auth-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.auth-container button {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.google-button {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.google-button:hover {
+    background-color: #357AE8;
+}
+
+.auth-container p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.auth-container p a {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la lista de comidas */
+.meal-list-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.meal-list-container h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Centramos el título */
+}
+
+.meal-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.meal-list-container li {
+    display: flex;
+    justify-content: space-between; /* Espacia el texto y el botón */
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #F5E4B9; /* Amarillo Suave */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #333; /* Texto oscuro */
+    font-size: 16px; /* Tamaño de fuente ajustado */
+}
+
+.meal-list-container span {
+    flex: 1; /* Permite que el texto ocupe el espacio disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.meal-list-container button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente ajustado */
+}
+
+.meal-list-container button:hover {
+    background-color: #c9302c;
+}
