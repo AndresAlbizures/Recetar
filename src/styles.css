@@ -26,6 +26,25 @@
     flex: 1; /* Allows the content to expand and take available space */
 }
 
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Align logo to the left */
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Texto oscuro */
+}
+
+/* Styles for nav buttons and links */
 .navbar-content a, .navbar-content button {
     background-color: #F5E4B9; /* Amarillo Suave */
     color: #333; /* Texto oscuro */
@@ -40,12 +59,12 @@
     text-align: center; /* Centra el texto en los botones */
 }
 
-/* Estilos para los botones en estado hover */
+/* Hover styles for nav buttons and links */
 .navbar-content a:hover, .navbar-content button:hover {
     background-color: #D0B8A8; /* Beige Claro */
 }
 
-/* Ajustar el padding-top del body para evitar que el contenido quede debajo del navbar */
+/* Body styles */
 body {
     margin: 0;
     padding: 0;
@@ -54,13 +73,14 @@ body {
     background-color: #F6F4E6; /* Crema */
 }
 
+/* Container styles */
 .container {
     width: 90%;
     max-width: 1200px; /* Ensure the container is centered */
     margin: 0 auto;
 }
 
-/* Estilos específicos para dispositivos móviles */
+/* Responsive styles */
 @media (max-width: 768px) {
     .navbar {
         padding: 10px;
@@ -90,7 +110,7 @@ body {
     }
 }
 
-/* Estilos generales para el contenido */
+/* General styles for form */
 form {
     background-color: #FFF; /* Blanco */
     padding: 20px;
@@ -125,7 +145,7 @@ form button:hover {
     background-color: #45a049; /* Verde más oscuro */
 }
 
-/* Estilos para listas */
+/* List styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -140,7 +160,7 @@ li {
     color: #333; /* Texto oscuro */
 }
 
-/* Estilos para el botón de agregar a la lista */
+/* Add meal button styles */
 .add-meal-button {
     background-color: #4CAF50; /* Verde estándar */
     color: white;
@@ -156,21 +176,21 @@ li {
     background-color: #45a049; /* Verde más oscuro */
 }
 
-/* Estilos para los encabezados */
+/* Heading styles */
 h1 {
     margin: 20px 0;
     font-size: 24px;
-    color: #2f8855; /* Rosa Palo */
+    color: #2f8855; /* Verde */
     text-align: center;
 }
 
 h3 {
     margin: 10px 0;
     font-size: 18px;
-    color: #66ca6e; /* Rosa Palo */
+    color: #66ca6e; /* Verde Claro */
 }
 
-/* Estilos para el contenedor de autenticación */
+/* Authentication container styles */
 .auth-container {
     text-align: center;
     margin: 20px auto;
@@ -227,7 +247,7 @@ h3 {
     text-decoration: underline;
 }
 
-/* Estilos para la lista de comidas */
+/* Meal list container styles */
 .meal-list-container {
     padding: 20px;
     background-color: #f9f9f9;
