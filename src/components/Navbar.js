@@ -1,7 +1,6 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles.css'; // Asegúrate de que este archivo esté correctamente importado
+import '../styles.css';
 
 const Navbar = ({ onGenerateCalendar }) => {
   return (

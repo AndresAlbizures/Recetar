@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Asegúrate de que Link está importado
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, googleProvider } from '../firebase';
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import '../styles.css';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -12,8 +13,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      alert('Usuario registrado con éxito');
-      navigate('/'); // Redirigir a la página principal
+      navigate('/');
     } catch (error) {
       alert(error.message);
     }
@@ -22,8 +22,7 @@ const SignUp = () => {
   const handleGoogleSignUp = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      alert('Usuario registrado con Google con éxito');
-      navigate('/'); // Redirigir a la página principal
+      navigate('/');
     } catch (error) {
       alert(error.message);
     }
